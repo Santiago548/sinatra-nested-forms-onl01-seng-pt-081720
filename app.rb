@@ -11,8 +11,8 @@ module FormsLab
     end
 
     post '/pirates' do
-      status 200
-      @pirate = Pirate.new(params[:pirate])
+      
+      @pirate = Pirate.new(params[:pirates])
 
       params[:pirates][:ships].each do |details|
         Ship.new(details)
